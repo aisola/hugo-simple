@@ -1,0 +1,60 @@
+{{ partial "header" . }}
+
+<main>
+
+    <header class="site-header accent">
+        <h1>{{ .Title }}</h1>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-offset-1">
+
+                {{ range (.Paginator 5).Pages }}
+
+                    <article>
+                        <header>
+                            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                            <h5>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</h5>
+                        </header>
+
+                        <section class="post-content">
+                            <p>{{ .Summary }}</p>
+                        </section>
+
+                        <footer>{{ range .Params.tags }} <kbd class="item-tag">{{ . }}</kbd> {{ end }}</footer>
+                    </article>
+
+                {{ end }}
+
+            </div>
+        </div>
+    </div>
+
+</main>
+
+{{ if or .Paginator.HasPrev .Paginator.HasNext }}
+
+    <div class="pages">
+
+        {{ if .Paginator.HasPrev }}
+            <a class="icon pages-icon" href="{{ .Paginator.Prev.URL }}" rel="prev">
+                <i class="fa fa-arrow-left"></i> Previous Posts
+            </a>
+        {{ end }}
+
+        {{ if and .Paginator.HasPrev .Paginator.HasNext }}
+            {{ ":ghost:" | emojify }}
+        {{ end }}
+
+        {{ if .Paginator.HasNext }}
+            <a class="icon pages-icon" href="{{ .Paginator.Next.URL }}" rel="next">
+                Next Posts <i class="fa fa-arrow-right"></i>
+            </a>
+        {{ end }}
+
+    </div>
+
+{{ end }}
+
+{{ partial "footer" . }}

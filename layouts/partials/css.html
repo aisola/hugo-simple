@@ -1,0 +1,60 @@
+
+<!-- font awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<!-- bootstrap -->
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+
+<!-- prism syntax highlighting -->
+<link rel="stylesheet" type="text/css" href="/css/prism.css" />
+
+<style>
+
+    html body {
+        font-family: {{ .Site.Params.font }}, sans-serif;
+    }
+
+    .intro {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        background-color: {{ .Site.Params.accent | default "#ffffff" }};
+    }
+
+    .intro main > h1 {
+        font-size: 12vh;
+    }
+
+    .intro main > h2 {
+        font-size: 3vmin;
+    }
+
+    .accent {
+        color: {{ .Site.Params.accentText | default "#000000" }};
+        background-color: {{ .Site.Params.accent | default "#ffffff" }};
+    }
+
+    a {
+        color: {{ .Site.Params.accent | default "#ffffff" }};
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: {{ .Site.Params.accent | default "#ffffff" }};
+        text-decoration: underline;
+    }
+
+    .intro a,
+    .intro a:hover,
+    .intro .text-muted {
+        color: {{ .Site.Params.accentText | default "#000000" }};
+    }
+
+    .intro main {
+        margin: 25vh 0;
+        color: {{ .Site.Params.accentText | default "#000000" }};
+    }
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="/css/simple.css" />

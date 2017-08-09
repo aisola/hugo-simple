@@ -1,0 +1,111 @@
+
+/* navigation bar */
+.navbar-default {
+    margin-bottom: 0;
+    background-color: #ffffff;
+    border-radius: 0;
+}
+
+.navbar-icon {
+    font-size: 125%;
+    display: inline-block !important;
+}
+
+/* default */
+
+main article {
+    margin: 5em 0;
+}
+
+.site-header {
+    padding: 7em;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 3.5em;
+    text-align: center;
+}
+
+
+/* post single */
+
+.post-header {
+    color: #ffffff;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.post-header .post-header-overlay {
+    padding: 7em;
+    background: rgba(0, 0, 0, 0.50);
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+}
+
+.post-header h1,
+.post-header h5 {
+    margin: 0.5em;
+    text-align: center;
+}
+
+.post-header h1 {
+    font-size: 3.5em;
+}
+
+.post-header h5 {
+    font-size: 1.5em;
+}
+
+.post-content blockquote,
+.post-content ul,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6,
+.post-content p {
+    margin: 1em 0;
+}
+
+.post-content blockquote p {
+    margin: 0;
+}
+
+.post-content h1 {
+    font-size: 54px;
+}
+
+.post-content h2 {
+    font-size: 45px;
+}
+
+.post-content h3 {
+    font-size: 36px;
+}
+
+.post-content h4 {
+    font-size: 27px;
+}
+
+.post-content h5,
+.post-content p,
+.post-content ul,
+.post-content li {
+    font-size: 21px;
+}
+
+.post-content blockquote,
+.post-content blockquote p,
+.post-content pre,
+.post-content h6 {
+    font-size: 18px;
+}
+
+/* footer */
+.site-footer {
+    padding: 3em;
+}

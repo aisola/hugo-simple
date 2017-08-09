@@ -1,0 +1,19 @@
+
+        <footer class="site-footer text-center">
+
+            <p class="copyright text-muted">
+                Copyright &copy; 2017, {{ .Site.Params.owner }}. All rights reserved.
+                {{ if .Site.Menus.footer }}
+                    {{ range sort .Site.Menus.footer }}
+                        | <a href="{{ .URL }}">{{ .Name }}</a>
+                    {{ end }}
+                {{ end }}
+            </p>
+
+        </footer>
+
+        {{ partial "js" . }}
+    </body>
+
+</html>
+

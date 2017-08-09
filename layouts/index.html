@@ -1,0 +1,16 @@
+{{ partial "header" . }}
+
+<main>
+
+    <h1>{{ .Site.Title }}</h1>
+
+    <h2>{{ .Site.Params.Description }}</h2>
+
+    {{- range first 1 (where .Data.Pages.ByPublishDate "Section" "post") }}
+        <h4 class="latest-post">Read my latest post:</h4>
+        <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+    {{- end }}
+
+</main>
+
+{{ partial "footer" . }}

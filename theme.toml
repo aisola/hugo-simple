@@ -1,0 +1,12 @@
+name = "Simple"
+license = "MIT"
+licenselink = "https://github.com/aisola/simple/blob/master/LICENSE"
+description = "Simple, blog-based theme for Hugo"
+homepage = "http://github.com/aisola/simple"
+tags = ["blog", "simple", "personal", "responsive"]
+features = ["responsive"]
+min_version = "0.24.1"
+
+[author]
+  name = "Abram Isola"
+  homepage = "http://abram.isola.mn"
