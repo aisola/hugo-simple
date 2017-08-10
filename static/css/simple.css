@@ -27,6 +27,15 @@ main article {
     text-align: center;
 }
 
+/* project */
+.project {
+    margin: 0;
+    padding: 2em;
+}
+
+.project p {
+    font-size: 18px;
+}
 
 /* post single */
 

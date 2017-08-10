@@ -8,25 +8,33 @@
 
     <div class="container">
 
-        {{ range (.Paginator 20).Pages }}
+        {{ range $index, $element := (.Paginator 20).Pages }}
 
-            <article class="project col-xs-12 col-md-3 text-center">
-                <header>
-                    {{ if or (eq .Params.image "") (eq .Params.image nil)  }}
-                        <h2><a href="{{ .Params.website }}" target="_blank">{{ .Title }}</a></h2>
-                    {{ else }}
-                        <a href="{{ .Params.website }}">
-                            <img src="{{ .Params.image }}" alt="{{ .Title }} Logo" />
-                        </a>
-                    {{ end }}
-                </header>
+            <div class="col-md-3">
+                <article class="project">
+                    <header>
+                        {{ if or (eq $element.Params.image "") (eq $element.Params.image nil)  }}
+                            <h2><a href="{{ $element.Params.website }}" target="_blank">{{ .Title }}</a></h2>
+                        {{ else }}
+                            <a href="{{ $element.Params.website }}">
+                                <img src="{{ $element.Params.image }}" alt="{{ $element.Title }} Logo" />
+                            </a>
+                        {{ end }}
+                    </header>
 
-                <section class="post-content">
-                    <p>{{ .Params.description }}</p>
-                </section>
+                    <section>
+                        <p>{{ $element.Params.description }}</p>
+                    </section>
 
-                <footer>{{ range .Params.tags }} <kbd class="item-tag">{{ . }}</kbd> {{ end }}</footer>
-            </article>
+                    <footer>{{ range $element.Params.tags }} <kbd class="item-tag">{{ . }}</kbd> {{ end }}</footer>
+                </article>
+            </div>
+
+            {{ $ourIndex := add $index 1 }}
+            {{ if modBool $ourIndex 4 }}
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix"> </div>
+            {{ end }}
 
         {{ end }}
 
