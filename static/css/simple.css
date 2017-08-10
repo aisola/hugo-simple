@@ -114,6 +114,10 @@ main article {
     font-size: 18px;
 }
 
+.post-content img {
+    max-width: 100%;
+}
+
 /* footer */
 .site-footer {
     padding: 3em;
