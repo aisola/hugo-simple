@@ -1,12 +1,12 @@
 {{ partial "header" . }}
 
-<article>
+<article itemscope itemtype="http://schema.org/Article">
     <header class="post-header" style='background-image: url("{{ .Page.Params.image }}");'>
 
         <div class="post-header-overlay">
 
-            <h1>{{ .Title }}</h1>
-            <h5>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</h5>
+            <h1 itemprop="name">{{ .Title }}</h1>
+            <h5 itemprop="dataPublished">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</h5>
             <!-- {{ range .Params.tags }} <kbd class="item-tag">{{ . }}</kbd> {{ end }} -->
 
         </div>
@@ -16,7 +16,7 @@
     <section class="post-content container">
         <!-- Content -->
         <div class="row">
-            <div class="col-xs-12 col-md-10 col-md-offset-1">
+            <div class="col-xs-12 col-md-10 col-md-offset-1" itemprop="articleBody">
                 {{ .Content }}
             </div>
         </div>
